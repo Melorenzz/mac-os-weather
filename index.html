@@ -10,28 +10,37 @@
 </head>
 <body class="text-white bg-gray-600">
 <div class="container">
-    <select id="userCity" class="mt-[10px] w-full max-w-xs bg-gray-900 text-white text-lg font-semibold rounded-xl px-4 py-2 shadow-lg transition-all duration-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option selected value="Prague">Prague</option>
+    <select id="userCity" class="mt-2 w-full max-w-xs bg-[#FFFFFF3F] text-white text-lg font-semibold rounded-[10px] px-4 py-2 shadow-md transition-all duration-300 hover:bg-[#FFFFFF52] focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
+        <option selected value="" disabled>Choose another country</option>
+        <option value="Prague">Prague</option>
         <option value="Los Angeles">Los Angeles</option>
         <option value="Kryvyi Rih">Kryvyi Rih</option>
     </select>
 
     <div class="mx-auto mt-[50px] relative h-[200px] w-auto">
         <p class="absolute absolute_center top-[17%] text-[35px] font-[400]" id="city"></p>
-        <p class="absolute absolute_center top-[50%] text-[100px] font-[100]" id="temperature"></p>
+        <p class="absolute absolute_center top-[50%] text-[100px] font-[100 temperature"></p>
         <p class="absolute absolute_center top-[83%] text-[20px] font-[400]" id="description"></p>
     </div>
     <div class="mt-[40px] grid grid-cols-[repeat(6,1fr)] grid-rows-[repeat(3,_220px)] gap-5">
-        <div class="p-[10px] rounded-[10px] col-span-4 bg-white"></div>
-        <div class="p-[10px] rounded-[10px] col-span-2 row-span-2 bg-white" id="userLocationMap"></div>
-        <div class="p-[10px] rounded-[10px] col-span-2 row-span-2 bg-white"></div>
-        <div class="p-[10px] rounded-[10px] col-span-2 bg-white"></div>
-        <div class="p-[10px] rounded-[10px] bg-white"></div>
-        <div class="p-[10px] rounded-[10px] bg-white"></div>
-        <div class="p-[10px] rounded-[10px] bg-white"></div>
-        <div class="p-[10px] rounded-[10px] bg-white"></div>
+        <div class="p-[10px] rounded-[10px] col-span-4 bg-[#FFFFFF3F] flex">
+            <div class="flex flex-col gap-[10px] items-center justify-center">
+                <p class="text-[14px] font-[500]">Now</p>
+                <p class="temperature text-[18px] font-[400]">12</p>
+            </div>
+        </div>
+        <div class="p-[10px] rounded-[10px] col-span-2 row-span-2 bg-[#FFFFFF3F]" id="userLocationMap"></div>
+        <div class="p-[10px] rounded-[10px] col-span-2 row-span-2 bg-[#FFFFFF3F]"></div>
+        <div class="p-[10px] rounded-[10px] col-span-2 bg-[#FFFFFF3F]"></div>
+        <div class="p-[10px] rounded-[10px] bg-[#FFFFFF3F]"></div>
+        <div class="p-[10px] rounded-[10px] bg-[#FFFFFF3F]"></div>
+        <div class="p-[10px] rounded-[10px] bg-[#FFFFFF3F]"></div>
+        <div class="p-[10px] rounded-[10px] bg-[#FFFFFF3F]"></div>
 
     </div>
+</div>
+<div class="fixed inset-0 flex items-center justify-center bg-[#00000041] bg-opacity-50 hidden" id="loader">
+    <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
 </div>
 <script src="script.js"></script>
 </body>

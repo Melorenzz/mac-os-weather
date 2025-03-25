@@ -8,3 +8,12 @@
     transform: translate(-50%, -50%);
 
 }
+.scattered_clouds{
+    background: url("../img/descriptionIMG/scattered clouds.png") no-repeat center;
+    background-size: cover;
+}
+.grid_block-bg{
+    background-color: hsla(0, 0%, 76%, 0.4);
+    -webkit-backdrop-filter: blur(1.1875rem);
+    backdrop-filter: blur(1.1875rem);
+}
